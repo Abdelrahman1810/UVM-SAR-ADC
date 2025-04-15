@@ -14,8 +14,8 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
 ##  UVM hierarchy
 
 ```sh
-└── UVM-SAR-ADC.git/
-    ├── UVM
+└── UVM-SAR-ADC/
+    ├── UVM/
     │   ├── interface
     │   │   └── AES_intf.sv
     │   ├── objects
@@ -50,11 +50,16 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
     │       │   │       └── subscriber.sv
     │       │   └── test.sv
     │       └── top.sv
-    ├── SAR_ADC_RTL
+    ├── SAR_ADC_RTL/
     │   ├── ...
     │   ├── ...
     │   └── ...
-    └── run.tcl
+    ├── Reports/
+    │   └── ...
+    ├── Makefile
+    ├── run_SingleTest.tcl
+    ├── run_MultiTest_Sequential.tcl
+    └── srcfiles_dms.f
 ```
 
 
@@ -75,15 +80,16 @@ To run this project, you will need:
     cd UVM-SAR-ADC
     ```
 
+### Single Test
 2. run Questasim in CMD (without GUI)
    ```bash
-   & vsim.exe -c -do .\run.tcl
+   make
     ```
-
-
-3. Compile the HDL files by executing the following command in the QuestaSim transcript tap (GUI): 
+### Multi Tests
+2. open QuestaSim (GUI)
+3. In transcript tab write
     ```ruby
-    do run.tcl
+    do run_MultiTest_Sequential.tcl
     ```
 ---
 
