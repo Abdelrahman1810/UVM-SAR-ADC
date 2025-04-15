@@ -12,6 +12,7 @@ SAR_ADC_RTL/ADC.sv
 UVM/shared_pkg/shared_pkg.sv
 UVM/objects/sequenceItem/sequenceItem.sv
 UVM/objects/sequences/main_sequence.sv
+UVM/objects/sequences/rst_sequence.sv
 UVM/objects/sequences/mode1_sequence.sv
 UVM/objects/sequences/mode2_sequence.sv
 UVM/objects/sequences/mode3_sequence.sv

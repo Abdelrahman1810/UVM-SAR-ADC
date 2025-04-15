@@ -9,8 +9,8 @@ parameter real 		V_SCALE  = 16.0;
 parameter NUM_TESTS = 100;
 parameter RESER_ACTIVE = 0;
 
-parameter MODE1_LOOP = 50;
-parameter MODE2_LOOP = 50;
-parameter MODE3_LOOP = 50;
-parameter MODE4_LOOP = 50;
+parameter MODE1_LOOP = 250;
+parameter MODE2_LOOP = 250;
+parameter MODE3_LOOP = 250;
+parameter MODE4_LOOP = 250;
 endpackage
