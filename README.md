@@ -24,11 +24,11 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
     │   │   ├── sequenceItem
     │   │   │   └── sequenceItem.sv
     │   │   └── sequences
-    │   │       └── main_sequence.sv
-    │   │       └── rst_sequence.sv
-    │   │       └── mode1_sequence.sv
-    │   │       └── mode2_sequence.sv
-    │   │       └── mode3_sequence.sv
+    │   │       ├── main_sequence.sv
+    │   │       ├── rst_sequence.sv
+    │   │       ├── mode1_sequence.sv
+    │   │       ├── mode2_sequence.sv
+    │   │       ├── mode3_sequence.sv
     │   │       └── mode4_sequence.sv
     │   ├── shared_pkg
     │   │   └── shared_pkg.sv
@@ -56,10 +56,17 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
     │   └── ...
     ├── Reports/
     │   └── ...
-    ├── Makefile
-    ├── run_SingleTest.tcl
-    ├── run_MultiTest_Sequential.tcl
-    └── srcfiles_dms.f
+    ├── Simulation/
+    │   ├── Windows/
+    │   │       ├── Makefile
+    │   │       ├── run_tests_parallel.bat
+    │   │       ├── run_MultiTest_Parallel.tcl
+    │   │       ├── run_MultiTest_Sequential.tcl
+    │   │       ├── run_SingleTest.tcl
+    │   │       └── srcfiles_dms.f
+    │   └── Linux/`InProgress`
+    └── transcripts/
+        └── ...
 ```
 
 
@@ -81,16 +88,40 @@ To run this project, you will need:
     ```
 
 ### Single Test
-2. run Questasim in CMD (without GUI)
+- Method1: `without GUI`
+
+    open cmd:
    ```bash
-   make
+   make sim_single_test
     ```
-### Multi Tests
-2. open QuestaSim (GUI)
-3. In transcript tab write
-    ```ruby
+- Method2: `GUI` 
+
+    open QuestaSim and open transcript tab:
+   ```bash
+   do run_SingleTest.tcl
+    ```
+
+### Multi Tests Sequential
+- Method1: `without GUI`
+
+    open cmd:
+   ```bash
+   make sim_single_test
+    ```
+- Method2: `GUI`
+
+    open QuestaSim and open transcript tab:
+    ```bash
     do run_MultiTest_Sequential.tcl
     ```
+
+### Multi Tests Parallel
+-   open cmd:
+    ```bash
+    make sim_parallel
+    ```
+
+
 ---
 
 ## 🧑‍💻Contributing
