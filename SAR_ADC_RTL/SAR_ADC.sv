@@ -8,7 +8,7 @@
 	import snps_msv_nettype_pkg::*;
 `endif
 
-module ADC #(
+module SAR_ADC #(
 	parameter real 	V_SCALE 	= 16.0,
 	parameter 			NUM_BITS	= 4
 ) (
@@ -55,4 +55,4 @@ module ADC #(
 	DAC 					#(.V_SCALE(V_SCALE), .NUM_BITS(NUM_BITS))
 																				D2A (	.D_in(D_out_internal), 	.A_out(V2_CMP));
 
-endmodule : ADC
+endmodule : SAR_ADC

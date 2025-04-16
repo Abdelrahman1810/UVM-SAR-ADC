@@ -19,7 +19,7 @@ import shared_pkg::*;
 	sampler_gm 		#(.NUM_BITS(shared_pkg::NUM_BITS)) 	GM 		(GMif);
 
 // Only Connect DUT to Digital Interface (Compatible with Pure Digital / RNM)
-	ADC #(.V_SCALE(shared_pkg::V_SCALE)) DUT (intf);
+	SAR_ADC #(.V_SCALE(shared_pkg::V_SCALE)) DUT (intf);
 
     assign intf.V_target = DUT.SH.V_target;
 
