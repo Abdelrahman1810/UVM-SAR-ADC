@@ -51,11 +51,7 @@ class ADC_Base_test extends uvm_test;
     task run_phase(uvm_phase phase);
     super.run_phase(phase);
         phase.raise_objection(this);
-            `uvm_info(get_full_name(), "rais objection", UVM_LOW)
-            
-            #10;
-            // `uvm_info(get_full_name(), "Main__ Test", UVM_LOW)
-            // main_seq.start(env.agt.sqr);
+            `uvm_info(get_full_name(), "rais objection", UVM_LOW)            
             rst_seq.start(env.agt.sqr);
             `uvm_info(get_full_name(), "MODE_1_ Test", UVM_LOW)
             md1_seq.start(env.agt.sqr);
@@ -71,11 +67,10 @@ class ADC_Base_test extends uvm_test;
             rst_seq.start(env.agt.sqr);
             `uvm_info(get_full_name(), "MODE_4_ Test", UVM_LOW)
             md4_seq.start(env.agt.sqr);
-            #10;
-            
             `uvm_info(get_full_name(), "drop objection", UVM_LOW)
         phase.drop_objection(this);
     endtask
+
 endclass //ADC_Base_test extends uvm_test
 
 class ADC_Mode1_Test extends ADC_Base_test;
@@ -94,7 +89,7 @@ class ADC_Mode1_Test extends ADC_Base_test;
     endfunction
 
     task run_phase(uvm_phase phase);
-    super.run_phase(phase);
+    // super.run_phase(phase);
         phase.raise_objection(this);
         `uvm_info(get_full_name(), "rais objection", UVM_LOW)
 

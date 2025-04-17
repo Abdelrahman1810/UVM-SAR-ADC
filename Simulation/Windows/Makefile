@@ -2,18 +2,29 @@ QUESTA_PATH = C:\\questasim64_2021.1\\win64\\vsim.exe
 SINGLET_SCRIPT = run_SingleTest.tcl
 MULTIT_SCRIPT = run_MultiTest_Sequential.tcl
 OUTPUT = transcript.log
+OUTPUT_CAP = transcript_capstats.log
 
-sim_single_test:
+simSingleTest: 
 	clear
 	${QUESTA_PATH} -c -do ${SINGLET_SCRIPT} > ${OUTPUT}
- 
-sim_sequential:
+	python extract.py
+
+
+sim_capstats: 
+	clear
+	vsim.exe -do ${SINGLET_SCRIPT}
+	python extract.py
+
+simMultiTest_seq:
 	vsim.exe -do ${MULTIT_SCRIPT}
- 
-sim_parallel:
+	# rm -rf work/ *.xml transcript* vsim*
+	python extract.py
+
+sim_multi_test_par:
 	.\run_tests_parallel.bat
 
 clean:
-	rm ../../transcripts/*.log
-	rm *.xml *.wlf wlft* transcript
+	rm *.xml *.wlf transcript
 	rm -rf work
+
+	

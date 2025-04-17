@@ -15,6 +15,7 @@ class ADC_scoreboard extends uvm_scoreboard;
     // error and correct counter
     int correct_counter = 0;
     int error_counter = 0;
+    int numberOfTransactions = 0;
 
     function new(string name = "ADC_scoreboard", uvm_component parent = null);
         super.new(name, parent);
@@ -35,6 +36,7 @@ class ADC_scoreboard extends uvm_scoreboard;
 
     function void write(ADC_sequenceItem t);
         item = t;
+        numberOfTransactions++;
         Checking_task(item); 
     endfunction
 
@@ -50,6 +52,9 @@ class ADC_scoreboard extends uvm_scoreboard;
 
     function void report_phase(uvm_phase phase);
         super.report_phase(phase);
+        `uvm_info("report_phase", "------------------------------------------", UVM_LOW)
+        `uvm_info("report_phase", $sformatf("----- Total Number of transaction: %0d ", numberOfTransactions), UVM_LOW)
+        `uvm_info("report_phase", "------------------------------------------", UVM_LOW)
         `uvm_info("report_phase", "------------------------------------------", UVM_LOW)
         `uvm_info("report_phase", $sformatf("----- Total correct transaction: %0d ", correct_counter), UVM_LOW)
         `uvm_info("report_phase", "------------------------------------------", UVM_LOW)

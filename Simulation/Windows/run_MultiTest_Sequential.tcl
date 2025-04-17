@@ -11,10 +11,10 @@ foreach test {ADC_Mode1_Test ADC_Mode2_Test ADC_Mode3_Test ADC_Mode4_Test} {
     # Capture start time
     set start_time [clock milliseconds]
 
-    vsim -coverage -vopt +UVM_VERBOSITY=UVM_LOW work.top +UVM_TESTNAME=$test -c -do "
+    vsim -coverage -vopt +UVM_VERBOSITY=UVM_LOW work.top +UVM_NO_RELNOTES +UVM_TESTNAME=$test -c -do "
         add wave *;
         run -all
-        coverage save -onexit -directive -codeAll cover_${test}.ucdb;
+        coverage save -onexit -directive -codeAll {../../UCDB_files/cover_${test}.ucdb};
     "
     
     set end_time [clock milliseconds]
@@ -23,7 +23,7 @@ foreach test {ADC_Mode1_Test ADC_Mode2_Test ADC_Mode3_Test ADC_Mode4_Test} {
     set elapsed_time [expr {($end_time - $start_time) / 1000.0}]
 
     
-    after 5000
+    capstats
 
     # Store test report in the list
     append test_reports "Test: $test | Execution Time: ${elapsed_time} seconds\n"
@@ -33,16 +33,16 @@ foreach test {ADC_Mode1_Test ADC_Mode2_Test ADC_Mode3_Test ADC_Mode4_Test} {
 }
 
 # Merge UCDB files
-set merged_ucdb "Coverage_report_merged.ucdb"
-vcover merge $merged_ucdb {*}$ucdb_files
-puts "Merged UCDB file created: $merged_ucdb"
+# set merged_ucdb "Coverage_report_merged.ucdb"
+# vcover merge $merged_ucdb {*}$ucdb_files
+# puts "Merged UCDB file created: $merged_ucdb"
 
 # Print Final Test Execution Summary
 puts "\n======== TEST EXECUTION SUMMARY ========"
 puts $test_reports
 puts "========================================"
 
-quit -sim
+quit -f
 # Open merged UCDB in QuestaSim Coverage Viewer
 # vsim -viewcov $merged_ucdb
 # puts "Opened merged UCDB in QuestaSim Coverage Viewer"
