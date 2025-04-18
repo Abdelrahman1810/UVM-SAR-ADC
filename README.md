@@ -14,6 +14,22 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
 - Scoreboarding and coverage collection
 - Reusability and scalability for future analog/digital mixed-signal designs
 
+---
+
+## 🧠 Test Strategy
+
+This project supports different modes of running tests:
+
+- **Single Test Run**: Runs one UVM test to verify a specific scenario or feature.
+- **Multiple Test Run (Sequential)**: Runs multiple tests one after another. Useful for batch verification and regression.
+- **Multiple Test Run (Parallel)**: Runs multiple UVM tests concurrently to speed up simulation time and improve runtime efficiency, especially for long test regressions or large test suites.
+
+<!-- > 💡 **Note:** Running tests in **parallel** significantly enhances simulation performance by reducing the overall execution time compared to running them sequentially. -->
+
+> [!NOTE]
+> Running tests in **parallel** significantly enhances simulation performance by reducing the overall execution time compared to running all sequences in single test or running multiple test sequentially.
+---
+
 ##  UVM hierarchy
 
 ```sh
@@ -62,13 +78,23 @@ The goal of this project is to verify a SAR-ADC RTL design using a fully layered
     ├── Simulation/
     │   ├── Windows/
     │   │       ├── Makefile
+    │   │       ├── extracted.py
     │   │       ├── run_tests_parallel.bat
     │   │       ├── run_MultiTest_Parallel.tcl
     │   │       ├── run_MultiTest_Sequential.tcl
     │   │       ├── run_SingleTest.tcl
     │   │       └── srcfiles_dms.f
     │   └── Linux/`InProgress`
-    └── transcripts/
+    │   │       ├── Makefile
+    │   │       ├── extracted.py
+    │   │       ├── run_SingleTest.tcl
+    │   │       ├── run_MultiTest_Sequential.tcl
+    │   │       ├── run_tests_parallel.sh
+    │   │       ├── run_MultiTest_Parallel.tcl
+    │   │       └── srcfiles_dms.f
+    ├── transcripts/
+    │   └── ...
+    └── UCDB_files/
         └── ...
 ```
 
@@ -82,7 +108,7 @@ To run this project, you will need:
 - **UVM Library** (usually comes with simulator or install separately)
 - A Unix-like environment for using Makefile (Linux, macOS, or WSL on Windows)
 
-## ▶️ How to Run
+## ▶️ How to Run Windows
 
 1. Clone the repository:
    ```bash
@@ -115,13 +141,58 @@ To run this project, you will need:
 
     open QuestaSim and open transcript tab:
     ```bash
-    do run_MultiTest_Sequential.tcl
+    vsim.exe -do run_MultiTest_Sequential.tcl
     ```
 
 ### Multi Tests Parallel
 -   open cmd:
     ```bash
     make sim_parallel
+    ```
+
+
+---
+
+## ▶️ How to Run Linux
+
+1. Clone the repository:
+   ```bash
+    git clone https://github.com/Abdelrahman1810/UVM-SAR-ADC.git
+    cd UVM-SAR-ADC
+    ```
+
+### Single Test
+- Method1: `without GUI`
+
+    open cmd:
+   ```bash
+   make sim_single_test
+    ```
+- Method2: `GUI` 
+
+   ```bash
+   vsim -do run_SingleTest.tcl
+    ```
+
+### Multi Tests Sequential
+- Method1: `without GUI`
+
+    open terminal:
+   ```bash
+   make sim_single_test
+    ```
+- Method2: `GUI`
+
+    open QuestaSim and open transcript tab:
+    ```bash
+    vsim -do run_MultiTest_Sequential.tcl
+    ```
+
+### Multi Tests Parallel
+-   open terminal:
+    ```bash
+    sudo chmod +x sim_parallel.sh
+    ./sim_parallel.sh
     ```
 
 
