@@ -2,6 +2,9 @@
 
 This repository contains a **Universal Verification Methodology (UVM)** testbench for verifying a **Successive Approximation Register Analog-to-Digital Converter (SAR-ADC)** design. The project showcases a complete functional verification environment using industry-standard UVM practices.
 
+> [!IMPORTANT]
+> The RTL design files for the SAR-ADC RTL are sourced externally and are not created by me, done by [UVM AMS TEAM](https://docs.google.com/document/d/1hYTKV5uwAwiOqRAxozzYEXZuelAb0_p5_eVgXfvsk0M/edit?usp=sharing). This repository focuses only on the verification environment using UVM.
+
 ## 🧪 Project Description
 
 The goal of this project is to verify a SAR-ADC RTL design using a fully layered UVM testbench. The testbench is structured to enable:
