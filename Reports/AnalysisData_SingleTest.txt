@@ -1,0 +1,54 @@
+# UVM_INFO @ 0: reporter [RNTST] Running test ADC_Base_test...
+# UVM_INFO ../UVM/testbench_top/test/test.sv(54) @ 0: uvm_test_top [uvm_test_top] rais objection
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# UVM_INFO ../UVM/testbench_top/test/test.sv(56) @ 20: uvm_test_top [uvm_test_top] MODE_1_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(60) @ 5040: uvm_test_top [uvm_test_top] MODE_2_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(64) @ 10060: uvm_test_top [uvm_test_top] MODE_3_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(68) @ 15080: uvm_test_top [uvm_test_top] MODE_4_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(70) @ 20080: uvm_test_top [uvm_test_top] drop objection
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 20080: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(55) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(56) @ 20080: uvm_test_top.env.scb [report_phase] ----- Total Number of transaction: 2008
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(57) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(58) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(59) @ 20080: uvm_test_top.env.scb [report_phase] ----- Total correct transaction: 215
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(60) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(61) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(62) @ 20080: uvm_test_top.env.scb [report_phase] ----- Total faild transaction: 0
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(63) @ 20080: uvm_test_top.env.scb [report_phase] ------------------------------------------
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   17
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [report_phase]     9
+# [uvm_test_top]     6
+# ** Note: $finish    : /home/salby/mentor/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+
+# Coverage Report Totals BY INSTANCES: Number of Instances 33
+#
+#     Enabled Coverage              Bins      Hits    Misses    Weight  Coverage
+#     ----------------              ----      ----    ------    ------  --------
+#     Assertions                       4         4         0         1   100.00%
+#     Branches                        50        47         3         1    94.00%
+#     Conditions                       7         7         0         1   100.00%
+#     Covergroups                      1        na        na         1   100.00%
+#         Coverpoints/Crosses          5        na        na         1        na
+#             Covergroup Bins         27        27         0         1   100.00%
+#     FSM States                       5         5         0         1   100.00%
+#     FSM Transitions                  8         5         3         1    62.50%
+#     Statements                      73        71         2         1    97.26%
+#     Toggles                        110       106         4         1    96.36%
+# Total coverage (filtered view): 93.76%

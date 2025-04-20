@@ -1,0 +1,176 @@
+# UVM_INFO @ 0: reporter [RNTST] Running test ADC_Mode1_Test...
+# UVM_INFO ../UVM/testbench_top/test/test.sv(94) @ 0: uvm_test_top [uvm_test_top] rais objection
+# UVM_INFO ../UVM/testbench_top/test/test.sv(98) @ 30: uvm_test_top [uvm_test_top] MODE_1_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(102) @ 5040: uvm_test_top [uvm_test_top] drop objection
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5040: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(55) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(56) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total Number of transaction: 504
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(57) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(58) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(59) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total correct transaction: 86
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(60) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(61) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(62) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total faild transaction: 0
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(63) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   14
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [report_phase]     9
+# [uvm_test_top]     3
+# ** Note: $finish    : /home/salby/mentor/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+
+# Coverage Report Totals BY INSTANCES: Number of Instances 33
+#
+#     Enabled Coverage              Bins      Hits    Misses    Weight  Coverage
+#     ----------------              ----      ----    ------    ------  --------
+#     Assertions                       1         1         0         1   100.00%
+#     Branches                        50        41         9         1    82.00%
+#     Conditions                       7         7         0         1   100.00%
+#     Covergroups                      1        na        na         1    85.00%
+#         Coverpoints/Crosses          5        na        na         1        na
+#             Covergroup Bins         27        24         3         1    88.88%
+#     FSM States                       5         5         0         1   100.00%
+#     FSM Transitions                  8         5         3         1    62.50%
+#     Statements                      73        65         8         1    89.04%
+#     Toggles                        110        67        43         1    60.90%
+# Total coverage (filtered view): 84.93%
+# UVM_INFO @ 0: reporter [RNTST] Running test ADC_Mode2_Test...
+# UVM_INFO ../UVM/testbench_top/test/test.sv(126) @ 0: uvm_test_top [uvm_test_top] rais objection
+# UVM_INFO ../UVM/testbench_top/test/test.sv(130) @ 30: uvm_test_top [uvm_test_top] MODE_1_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(134) @ 5040: uvm_test_top [uvm_test_top] drop objection
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5040: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(55) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(56) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total Number of transaction: 504
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(57) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(58) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(59) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total correct transaction: 59
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(60) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(61) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(62) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total faild transaction: 0
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(63) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   14
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [report_phase]     9
+# [uvm_test_top]     3
+# ** Note: $finish    : /home/salby/mentor/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+
+# Coverage Report Totals BY INSTANCES: Number of Instances 33
+#
+#     Enabled Coverage              Bins      Hits    Misses    Weight  Coverage
+#     ----------------              ----      ----    ------    ------  --------
+#     Assertions                       1         1         0         1   100.00%
+#     Branches                        50        41         9         1    82.00%
+#     Conditions                       7         7         0         1   100.00%
+#     Covergroups                      1        na        na         1    86.25%
+#         Coverpoints/Crosses          5        na        na         1        na
+#             Covergroup Bins         27        22         5         1    81.48%
+#     FSM States                       5         5         0         1   100.00%
+#     FSM Transitions                  8         5         3         1    62.50%
+#     Statements                      73        65         8         1    89.04%
+#     Toggles                        110        81        29         1    73.63%
+# Total coverage (filtered view): 86.67%
+# UVM_INFO @ 0: reporter [RNTST] Running test ADC_Mode3_Test...
+# UVM_INFO ../UVM/testbench_top/test/test.sv(158) @ 0: uvm_test_top [uvm_test_top] rais objection
+# UVM_INFO ../UVM/testbench_top/test/test.sv(162) @ 30: uvm_test_top [uvm_test_top] MODE_1_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(166) @ 5040: uvm_test_top [uvm_test_top] drop objection
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5040: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(55) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(56) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total Number of transaction: 504
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(57) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(58) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(59) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total correct transaction: 41
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(60) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(61) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(62) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total faild transaction: 0
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(63) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   14
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [report_phase]     9
+# [uvm_test_top]     3
+# ** Note: $finish    : /home/salby/mentor/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+
+# Coverage Report Totals BY INSTANCES: Number of Instances 33
+#
+#     Enabled Coverage              Bins      Hits    Misses    Weight  Coverage
+#     ----------------              ----      ----    ------    ------  --------
+#     Assertions                       1         1         0         1   100.00%
+#     Branches                        50        41         9         1    82.00%
+#     Conditions                       7         7         0         1   100.00%
+#     Covergroups                      1        na        na         1    88.75%
+#         Coverpoints/Crosses          5        na        na         1        na
+#             Covergroup Bins         27        24         3         1    88.88%
+#     FSM States                       5         5         0         1   100.00%
+#     FSM Transitions                  8         5         3         1    62.50%
+#     Statements                      73        65         8         1    89.04%
+#     Toggles                        110        77        33         1    70.00%
+# Total coverage (filtered view): 86.53%
+# UVM_INFO @ 0: reporter [RNTST] Running test ADC_Mode4_Test...
+# UVM_INFO ../UVM/testbench_top/test/test.sv(190) @ 0: uvm_test_top [uvm_test_top] rais objection
+# UVM_INFO ../UVM/testbench_top/test/test.sv(194) @ 30: uvm_test_top [uvm_test_top] MODE_1_ Test
+# UVM_INFO ../UVM/testbench_top/test/test.sv(198) @ 5040: uvm_test_top [uvm_test_top] drop objection
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5040: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(55) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(56) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total Number of transaction: 504
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(57) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(58) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(59) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total correct transaction: 32
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(60) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(61) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(62) @ 5040: uvm_test_top.env.scb [report_phase] ----- Total faild transaction: 0
+# UVM_INFO ../UVM/testbench_top/test/env/scoreboard/scoreboard.sv(63) @ 5040: uvm_test_top.env.scb [report_phase] ------------------------------------------
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   14
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [report_phase]     9
+# [uvm_test_top]     3
+# ** Note: $finish    : /home/salby/mentor/questa/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+
+# Coverage Report Totals BY INSTANCES: Number of Instances 33
+#
+#     Enabled Coverage              Bins      Hits    Misses    Weight  Coverage
+#     ----------------              ----      ----    ------    ------  --------
+#     Assertions                       1         1         0         1   100.00%
+#     Branches                        50        41         9         1    82.00%
+#     Conditions                       7         7         0         1   100.00%
+#     Covergroups                      1        na        na         1    88.75%
+#         Coverpoints/Crosses          5        na        na         1        na
+#             Covergroup Bins         27        24         3         1    88.88%
+#     FSM States                       5         5         0         1   100.00%
+#     FSM Transitions                  8         5         3         1    62.50%
+#     Statements                      73        65         8         1    89.04%
+#     Toggles                        110        83        27         1    75.45%
+# Total coverage (filtered view): 87.21%

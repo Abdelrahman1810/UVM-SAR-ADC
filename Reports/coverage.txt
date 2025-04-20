@@ -1,0 +1,147 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /top/GMif
+=== Design Unit: work.sampler_gm_if
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /top/GM
+=== Design Unit: work.sampler_gm
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        15        14         1    93.33%
+    Conditions                       3         3         0   100.00%
+    Statements                      17        16         1    94.11%
+    Toggles                         22        21         1    95.45%
+
+=================================================================================
+=== Instance: /top/DUT/CTRLif
+=== Design Unit: work.SAR_Controller_if
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /top/DUT/SARif
+=== Design Unit: work.SAR_if
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         20        18         2    90.00%
+
+=================================================================================
+=== Instance: /top/DUT/CTRL
+=== Design Unit: work.SAR_Controller
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        15        14         1    93.33%
+    Conditions                       3         3         0   100.00%
+    Statements                      17        16         1    94.11%
+    Toggles                         22        21         1    95.45%
+
+=================================================================================
+=== Instance: /top/DUT/SAR0
+=== Design Unit: work.SAR
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        18        17         1    94.44%
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  8         5         3    62.50%
+    Statements                      25        25         0   100.00%
+    Toggles                          6         6         0   100.00%
+
+=================================================================================
+=== Instance: /top/DUT/SH
+=== Design Unit: work.sample_n_hold
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+    Toggles                          2         2         0   100.00%
+
+=================================================================================
+=== Instance: /top/DUT/CMP
+=== Design Unit: work.comparator
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Conditions                       1         1         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== Instance: /top/DUT/D2A
+=== Design Unit: work.DAC
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+    Toggles                          8         8         0   100.00%
+
+=================================================================================
+=== Instance: /top/DUT
+=== Design Unit: work.SAR_ADC
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       7         7         0   100.00%
+    Toggles                         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /mode1_seq_pkg
+=== Design Unit: work.mode1_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /mode2_seq_pkg
+=== Design Unit: work.mode2_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /mode3_seq_pkg
+=== Design Unit: work.mode3_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /mode4_seq_pkg
+=== Design Unit: work.mode4_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /subscriber_pkg
+=== Design Unit: work.subscriber_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          5        na        na        na
+            Covergroup Bins         27        27         0   100.00%
+
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 4
+
+Total Coverage By Instance (filtered view): 93.76%
+

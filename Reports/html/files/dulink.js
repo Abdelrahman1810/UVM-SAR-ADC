@@ -1,0 +1,2 @@
+var g_data = {"33":["work.DAC",100.00,1],"30":["work.SAR",91.38,1],"26":["work.SAR_ADC",100.00,1],"29":["work.SAR_Controller",95.72,1],"27":["work.SAR_Controller_if",100.00,1],"28":["work.SAR_if",90.00,1],"32":["work.comparator",100.00,1],"6":["work.mode1_seq_pkg",100.00,1],"7":["work.mode2_seq_pkg",100.00,1],"8":["work.mode3_seq_pkg",100.00,1],"9":["work.mode4_seq_pkg",100.00,1],"31":["work.sample_n_hold",100.00,1],"23":["work.sampler_gm",95.72,1],"2":["work.sampler_gm_if",100.00,1],"12":["work.subscriber_pkg",100.00,1]};
+processDuLinks(g_data);
