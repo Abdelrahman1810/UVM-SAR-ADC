@@ -110,86 +110,85 @@ To run this project, you will need:
 
 ## ▶️ How to Run Windows
 
-1. Clone the repository:
+1. open cmd. 
+
+2. Clone the repository:
    ```bash
     git clone https://github.com/Abdelrahman1810/UVM-SAR-ADC.git
     cd UVM-SAR-ADC
     ```
 
-### Single Test
-- Method1: `without GUI`
+3. Run Simulation
 
-    open cmd:
-   ```bash
-   make sim_single_test
-    ```
-- Method2: `GUI` 
+    3.1. Single Test
+    - Method1: `without GUI`
+    
+       ```bash
+       make sim_single_test
+        ```
+    - Method2: `GUI` 
+    
+       ```bash
+       vsim.exe -do run_SingleTest.tcl
+        ```
+    
+    3.2. Multi Tests Sequential
+    - Method1: `without GUI`
+    
+       ```bash
+       make sim_single_test
+        ```
+    - Method2: `GUI`
+    
+        ```bash
+        vsim.exe -do run_MultiTest_Sequential.tcl
+        ```
+    
+    3.3. Multi Tests Parallel
 
-    open QuestaSim and open transcript tab:
-   ```bash
-   do run_SingleTest.tcl
-    ```
-
-### Multi Tests Sequential
-- Method1: `without GUI`
-
-    open cmd:
-   ```bash
-   make sim_single_test
-    ```
-- Method2: `GUI`
-
-    open QuestaSim and open transcript tab:
-    ```bash
-    vsim.exe -do run_MultiTest_Sequential.tcl
-    ```
-
-### Multi Tests Parallel
--   open cmd:
-    ```bash
+   ```sh
     make sim_parallel
-    ```
+   ```
 
 
 ---
 
 ## ▶️ How to Run Linux
 
-1. Clone the repository:
+1. Open terminal:
+
+2. Clone the repository, opern terminal:
    ```bash
     git clone https://github.com/Abdelrahman1810/UVM-SAR-ADC.git
     cd UVM-SAR-ADC
     ```
-
-### Single Test
-- Method1: `without GUI`
-
-    open cmd:
-   ```bash
-   make sim_single_test
-    ```
-- Method2: `GUI` 
-
-   ```bash
-   vsim -do run_SingleTest.tcl
-    ```
-
-### Multi Tests Sequential
-- Method1: `without GUI`
-
-    open terminal:
-   ```bash
-   make sim_single_test
-    ```
-- Method2: `GUI`
-
-    open QuestaSim and open transcript tab:
-    ```bash
-    vsim -do run_MultiTest_Sequential.tcl
-    ```
-
-### Multi Tests Parallel
--   open terminal:
+3. run Simulation:
+    3.1 - Single Test
+    - Method1: `without GUI`
+    
+       ```bash
+       make sim_single_test
+        ```
+    - Method2: `GUI` 
+    
+       ```bash
+       vsim -do run_SingleTest.tcl
+        ```
+    
+    3.2 - Multi Tests Sequential
+    - Method1: `without GUI`
+    
+       ```bash
+       make sim_single_test
+        ```
+    - Method2: `GUI`
+    
+        ```bash
+        vsim -do run_MultiTest_Sequential.tcl
+        ```
+    
+    3.3 - Multi Tests Parallel
+    
     ```bash
     sudo chmod +x sim_parallel.sh
     ./sim_parallel.sh
