@@ -9,33 +9,37 @@ class ADC_subscriber extends uvm_component;
     `uvm_component_utils(ADC_subscriber)
     uvm_analysis_imp #(ADC_sequenceItem, ADC_subscriber) sub_imp; // subscriber export
     ADC_sequenceItem item;    
+    
+// ti cover V_in `real` we need some work around
+    int V_in_bucket;
 
     //////////////////////////////////
     //      begin Coverage Group    //
     //////////////////////////////////
 
     covergroup cvr_gp;
-        // rst_n_cp: coverpoint item.rst_n {
-        //     // cover
-        //     bins ONE = {0};
-        //     bins ZERO = {1};
-        // }
-        // V_in_cp:  coverpoint item.V_in {
-        //     // cover
-        //     bins V_in_range[16] = {[0.1:16.0]};
-        // }
-        // sample_rate_cp: coverpoint item.sample_rate {
-        //     // cover
-        // }
-        // D_out_cp: coverpoint item.D_out {
-        //     // cover
-        // }
-        // EOC_cp: coverpoint item.EOC {
-        //  // bins ONE = {1};
-        // }
-        // V_target_cp: coverpoint item.V_target {
-        //     // cover
-        // }
+        rst_n_cp: coverpoint item.rst_n {
+            // cover
+            bins ONE = {0};
+            bins ZERO = {1};
+        }
+        V_in_cp:  coverpoint V_in_bucket {
+            // cover
+            bins range_1 = {[0:3]};
+            bins range_2 = {[4:7]};
+            bins range_3 = {[8:11]};
+            bins range_4 = {[12:15]};
+        }
+        sample_rate_cp: coverpoint item.sample_rate {
+            bins mode[4] = {0, 1, 2, 3};
+            option.auto_bin_max = 0;
+        }
+        D_out_cp: coverpoint item.D_out {
+            bins DIGITAL[16] = {[0:15]};
+        }
+        EOC_cp: coverpoint item.EOC {
+            bins VALID = {1};
+        }
     endgroup
 
     ///////////////////////////////////
@@ -63,7 +67,12 @@ class ADC_subscriber extends uvm_component;
 
     function void write(ADC_sequenceItem t);
         item = t;
-        cvr_gp.sample();
+        V_in_bucket = int'(t.V_in);
+        take_sample();
     endfunction
+
+    task take_sample();
+        cvr_gp.sample();
+    endtask
 endclass //ADC_subscriber extends uvm_subscriber
 endpackage
