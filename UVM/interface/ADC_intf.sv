@@ -3,22 +3,17 @@ interface ADC_intf #(
 ) (
     input clk
 );
+    logic                   rst_n;          // input
+    logic   [1:0]           sample_rate;    // input
+    real                    V_in;           // input
 
-    //timeunit 1ns;
-    //timeprecision 1fs;
-    import uvm_pkg::*;
-    `include "uvm_macros.svh"
+    logic   [NUM_BITS-1:0]  D_out;          // output
+    logic                   EOC;            // output
+    
+    real                    V_target;       // internal signal
 
-    logic                   rst_n;
-    logic   [1:0]           sample_rate;
-    real                    V_in;
-    logic   [NUM_BITS-1:0]  D_out;
-    logic                   EOC;
-    real                    V_target;
-
-      modport DUT (input clk, rst_n, sample_rate, V_in, 
-                                output D_out, EOC);
-
-      modport TB (output rst_n, sample_rate, V_in, 
-                                input clk, D_out, EOC);
+    modport DUT (
+        input clk, rst_n, sample_rate, V_in, 
+        output D_out, EOC
+    );
 endinterface //ADC

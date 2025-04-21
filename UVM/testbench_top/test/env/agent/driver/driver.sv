@@ -30,7 +30,8 @@ class driver extends uvm_driver #(ADC_sequenceItem);
             item = ADC_sequenceItem::type_id::create("item");
             seq_item_port.get_next_item(item);
 
-                @(negedge v_if.clk);
+                @(posedge v_if.clk);
+
                 // Drive Digital Signals (RNM)
                 v_if.rst_n 		<= item.rst_n;
                 v_if.sample_rate <= item.sample_rate;

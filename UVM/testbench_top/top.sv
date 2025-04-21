@@ -27,7 +27,7 @@ import shared_pkg::*;
         uvm_config_db#(virtual ADC_intf)::set(null, "uvm_test_top", "INTF", intf);
         uvm_config_db#(virtual sampler_gm_if)::set(null, "uvm_test_top", "GMINTF", GMif);
         // run_test("ADC_test");
-        run_test("ADC_Mode2_Test");
+        run_test("");
     end    
 endmodule
     
