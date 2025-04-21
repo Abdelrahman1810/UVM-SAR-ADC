@@ -6,9 +6,9 @@ module SAR_Controller #(
 
 	// sample_sig: 	a pulse is sent at Sample Rate or just after rst_n deassertion
 
-	logic [NUM_BITS:0] counter;
+	logic [4:0] counter;
 	logic start_operation;
-	logic [NUM_BITS:0] rate;
+	logic [4:0] rate;
 
 
 	always @(posedge intf.clk or negedge intf.rst_n) begin

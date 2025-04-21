@@ -54,7 +54,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                        18        17         1    94.44%
     FSM States                       5         5         0   100.00%
-    FSM Transitions                  8         5         3    62.50%
+    FSM Transitions                  8         6         2    75.00%
     Statements                      25        25         0   100.00%
     Toggles                          6         6         0   100.00%
 
@@ -93,7 +93,10 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                       7         7         0   100.00%
+    Assertions                       8         8         0   100.00%
+    Branches                         4         4         0   100.00%
+    Directives                       8         8         0   100.00%
+    Statements                      10        10         0   100.00%
     Toggles                         10        10         0   100.00%
 
 =================================================================================
@@ -141,7 +144,9 @@ Coverage Report Summary Data by instance
 
 TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
 
-TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 4
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 8
 
-Total Coverage By Instance (filtered view): 93.76%
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 12
+
+Total Coverage By Instance (filtered view): 95.90%
 

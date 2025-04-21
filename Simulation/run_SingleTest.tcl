@@ -2,35 +2,35 @@ vlib work
 
 set start_time_com [clock microseconds]
 
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sampler_gm_if.sv}                            +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sampler_gm.sv}                               +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_Controller_if.sv}                        +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_Controller.sv}                           +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_if.sv}                                   +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR.sv}                                      +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/comparator.sv}                               +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/DAC.sv}                                      +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sample_n_hold.sv}                            +define+QUESTA
-vlog                         {../UVM/interface/ADC_intf.sv}                               +define+QUESTA
-vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_ADC.sv}                                  +define+QUESTA
-vlog                         {../UVM/shared_pkg/shared_pkg.sv}                            +define+QUESTA
-vlog                         {../UVM/objects/sequenceItem/sequenceItem.sv}                +define+QUESTA
-vlog                         {../UVM/objects/sequences/main_sequence.sv}                  +define+QUESTA
-vlog                         {../UVM/objects/sequences/rst_sequence.sv}                   +define+QUESTA
-vlog                         {../UVM/objects/sequences/mode1_sequence.sv}                 +define+QUESTA
-vlog                         {../UVM/objects/sequences/mode2_sequence.sv}                 +define+QUESTA
-vlog                         {../UVM/objects/sequences/mode3_sequence.sv}                 +define+QUESTA
-vlog                         {../UVM/objects/sequences/mode4_sequence.sv}                 +define+QUESTA
-vlog                         {../UVM/objects/configration/configration.sv}                +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/agent/driver/driver.sv}       +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/agent/monitor/monitor.sv}     +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/agent/sequencer/sequencer.sv} +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/agent/agent.sv}               +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/scoreboard/scoreboard.sv}     +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/subscriber/subscriber.sv}     +define+QUESTA
-vlog                         {../UVM/testbench_top/test/env/env.sv}                       +define+QUESTA
-vlog                         {../UVM/testbench_top/test/test.sv}                          +define+QUESTA
-vlog                         {../UVM/testbench_top/top.sv}                                +define+QUESTA
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sampler_gm_if.sv}                            +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sampler_gm.sv}                               +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_Controller_if.sv}                        +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_Controller.sv}                           +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_if.sv}                                   +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR.sv}                                      +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/comparator.sv}                               +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/DAC.sv}                                      +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/sample_n_hold.sv}                            +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/interface/ADC_intf.sv}                               +define+QUESTA+ASSERTIONS
+vlog -coveropt 3 +cover +acc {../SAR_ADC_RTL/SAR_ADC.sv}                                  +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/shared_pkg/shared_pkg.sv}                            +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequenceItem/sequenceItem.sv}                +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/main_sequence.sv}                  +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/rst_sequence.sv}                   +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/mode1_sequence.sv}                 +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/mode2_sequence.sv}                 +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/mode3_sequence.sv}                 +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/sequences/mode4_sequence.sv}                 +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/objects/configration/configration.sv}                +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/agent/driver/driver.sv}       +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/agent/monitor/monitor.sv}     +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/agent/sequencer/sequencer.sv} +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/agent/agent.sv}               +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/scoreboard/scoreboard.sv}     +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/subscriber/subscriber.sv}     +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/env/env.sv}                       +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/test/test.sv}                          +define+QUESTA+ASSERTIONS
+vlog                         {../UVM/testbench_top/top.sv}                                +define+QUESTA+ASSERTIONS
 
 set end_time_com [clock microseconds]
 set elapsed_time_com [expr {($end_time_com - $start_time_com)}]
@@ -44,6 +44,13 @@ vsim +UVM_VERBOSITY=UVM_LOW -voptargs=+acc work.top +UVM_NO_RELNOTES +UVM_TESTNA
 add wave -position insertpoint sim:/top/intf/*
 add wave -position insertpoint  \
 sim:/top/GMif/*
+
+add wave /top/DUT/assert_dout \
+/top/DUT/assert_eoc_4clks \
+/top/DUT/assert_comparator \
+/top/DUT/assert_counterValid \
+/top/DUT/assert_rst_Dout \
+/top/DUT/assert_rst_EOC
 
 run -all
 
