@@ -76,24 +76,14 @@ This project supports different modes of running tests:
     ├── Reports/
     │   └── ...
     ├── Simulation/
-    │   ├── Windows/
-    │   │       ├── Makefile
-    │   │       ├── extracted.py
-    │   │       ├── run_tests_parallel.bat
-    │   │       ├── run_MultiTest_Parallel.tcl
-    │   │       ├── run_MultiTest_Sequential.tcl
-    │   │       ├── run_SingleTest.tcl
-    │   │       └── srcfiles_dms.f
-    │   └── Linux/`InProgress`
-    │   │       ├── Makefile
-    │   │       ├── extracted.py
-    │   │       ├── run_SingleTest.tcl
-    │   │       ├── run_MultiTest_Sequential.tcl
-    │   │       ├── run_tests_parallel.sh
-    │   │       ├── run_MultiTest_Parallel.tcl
-    │   │       └── srcfiles_dms.f
-    ├── transcripts/
-    │   └── ...
+    │   ├── Makefile
+    │   ├── extracted.py
+    │   ├── run_tests_parallel.bat
+    │   ├── run_tests_parallel.sh
+    │   ├── run_MultiTest_Parallel.tcl
+    │   ├── run_MultiTest_Sequential.tcl
+    │   ├── run_SingleTest.tcl
+    │   └── srcfiles_dms.f
     └── UCDB_files/
         └── ...
 ```
@@ -108,92 +98,144 @@ To run this project, you will need:
 - **UVM Library** (usually comes with simulator or install separately)
 - A Unix-like environment for using Makefile (Linux, macOS, or WSL on Windows)
 
-## ▶️ How to Run Windows
+---
 
-1. open cmd. 
+## ▶️ Running on Windows
 
-2. Clone the repository:
-   ```bash
+### 1. Open Command Prompt (CMD)
+
+### 2. Clone the Repository
+
     git clone https://github.com/Abdelrahman1810/UVM-SAR-ADC.git
     cd UVM-SAR-ADC
+
+### 3. Run the Simulation
+🔹 Single Test
+
+- `Without GUI`
+
     ```
+    make win_simSingleTest
+    ```
+- `GUI` 
 
-3. Run Simulation
+    ```bash
+    make win_simCapstats
+    ```
+    
+🔹 Multiple Tests (Sequential)
 
-    3.1. Single Test
-    - Method1: `without GUI`
-    
-       ```bash
-       make sim_single_test
-        ```
-    - Method2: `GUI` 
-    
-       ```bash
-       vsim.exe -do run_SingleTest.tcl
-        ```
-    
-    3.2. Multi Tests Sequential
-    - Method1: `without GUI`
-    
-       ```bash
-       make sim_single_test
-        ```
-    - Method2: `GUI`
-    
-        ```bash
-        vsim.exe -do run_MultiTest_Sequential.tcl
-        ```
-    
-    3.3. Multi Tests Parallel
+- `GUI` 
 
-   ```sh
-    make sim_parallel
-   ```
+    ```bash
+    make win_simMultiTest_seq
+    ```
+    
+🔹 Multiple Tests (Parallel)
 
+- `Without GUI` 
+
+    ```bash
+    make win_simMultiTest_par
+    ```
 
 ---
 
-## ▶️ How to Run Linux
 
-1. Open terminal:
+## 🐧 Running on Linux/macOS
 
-2. Clone the repository, opern terminal:
-   ```bash
+### 1. Open Terminal
+
+### 2. Clone the Repository
+
+    ```
     git clone https://github.com/Abdelrahman1810/UVM-SAR-ADC.git
     cd UVM-SAR-ADC
     ```
-3. run Simulation:
-    3.1 - Single Test
-    - Method1: `without GUI`
-    
-       ```bash
-       make sim_single_test
-        ```
-    - Method2: `GUI` 
-    
-       ```bash
-       vsim -do run_SingleTest.tcl
-        ```
-    
-    3.2 - Multi Tests Sequential
-    - Method1: `without GUI`
-    
-       ```bash
-       make sim_single_test
-        ```
-    - Method2: `GUI`
-    
-        ```bash
-        vsim -do run_MultiTest_Sequential.tcl
-        ```
-    
-    3.3 - Multi Tests Parallel
-    
+
+### 3. Run the Simulation
+🔹 Single Test
+
+- `Without GUI`
+
+    ```
+    make lnx_simSingleTest
+    ```
+- `GUI` 
+
     ```bash
-    sudo chmod +x sim_parallel.sh
-    ./sim_parallel.sh
+    make lnx_simCapstats
+    ```
+    
+🔹 Multiple Tests (Sequential)
+
+- `GUI` 
+
+    ```bash
+    make lnx_simMultiTest_seq
+    ```
+    
+🔹 Multiple Tests (Parallel)
+
+- `Without GUI` 
+
+    ```bash
+    make lnx_simMultiTest_par
     ```
 
+---
+
+## 📊 Coverage & Logs
+The UVM-SAR-ADC project incorporates both functional and code coverage metrics to assess the thoroughness of the verification process. Coverage data is generated during simulation and can be analyzed to identify untested scenarios or code segments.
+
+### HTLM Report
+![HTLM_General_coverage](Reports/HTLM_Report(1).png)
+![HTLM_DUT_specifed](Reports/HTLM_Report(2).png)
+![Transcript_summart_report](Reports/Summary_Report.png)
+
+### Total Coverage: 95.90%
+
+---
+
+## ⏱️ Verification Time Comparison
+This section compares the simulation real-time duration for different test execution strategies used in the UVM-SAR-ADC project.
+
+Mode | Description | Real Time | Pros | Cons
+| --- | --- | --- | --- | --- |
+`Single Test` | All sequences run inside one testbench session | 9.015 seconds | Simple setup  Easier debug | Longer simulation time
+`Multiple Tests (Sequential)` | Each test runs independently, one after the other (serial execution) | 28.191 seconds | Modular testing  Isolated logs | Slower overall  No speedup
+`Multiple Tests (Parallel)` | Each test runs in a separate simulation instance simultaneously (in parallel) | 6.415 seconds | Fastest overall  Best for coverage regression | Higher resource usage  Complex scripting
+
+
+
+- Single Test (Only `user` and `sys` time is considered)
+
+![SingleTest](Reports/Single.png)
+
+---
+
+- Multiple Test Sequential (Only `user` and `sys` time is considered)
+
+![MultiTestSequential](Reports/Sequential.png)
+
+---
+
+- Multiple Test Parallel (Only `user` and `sys` time is considered)
+
+![MultiTestParallel](Reports/Parallel.png)
+---
+
+### 📌 How to Measure
+You can measure simulation real-time by observing terminal output or appending time before the command:
+```bash
+time make <lnx_sim...>
+```
+> [!IMPORTANT]
+> Before mesure time make sure remove:
+> 
+> All `#time` from test
+>
+> All comand exept the `vsim` one (e.g. remove `python3 extract.py`)
 
 ---
 
